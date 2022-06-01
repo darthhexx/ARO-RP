@@ -60,6 +60,10 @@ func TestIsOpenShiftNamespace(t *testing.T) {
 			namespace: "openshift-operator-lifecycle-manager",
 			want:      false,
 		},
+		{
+			namespace: "openshift-user-workload-monitoring",
+			want:      false,
+		},
 	} {
 		t.Run(tt.namespace, func(t *testing.T) {
 			got := IsOpenShiftNamespace(tt.namespace)
